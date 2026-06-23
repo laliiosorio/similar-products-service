@@ -1,10 +1,10 @@
-const axios = require('axios');
+const httpClient = require('../config/http-client');
 const { mockApiUrl } = require('../config/env');
 const AppError = require('../errors/app-error');
 
 async function getSimilarIds(productId) {
   try {
-    const response = await axios.get(`${mockApiUrl}/product/${productId}/similarids`);
+    const response = await httpClient.get(`${mockApiUrl}/product/${productId}/similarids`);
     return response.data;
   } catch (error) {
     if (error.response?.status === 404) {
@@ -17,7 +17,7 @@ async function getSimilarIds(productId) {
 
 async function getProductById(productId) {
   try {
-    const response = await axios.get(`${mockApiUrl}/product/${productId}`);
+    const response = await httpClient.get(`${mockApiUrl}/product/${productId}`);
     return response.data;
   } catch (error) {
     if (error.response?.status === 404) {
