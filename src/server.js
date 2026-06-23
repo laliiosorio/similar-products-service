@@ -1,6 +1,5 @@
-require('module-alias/register');
-const buildApp = require('@/app');
-const { port } = require('@/config/env');
+const buildApp = require('./app');
+const { port } = require('./config/env');
 
 const app = buildApp();
 
