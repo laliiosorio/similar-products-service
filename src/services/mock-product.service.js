@@ -5,7 +5,6 @@ const AppError = require('../errors/app-error');
 
 async function getSimilarIds(productId) {
   if (similarIdsCache.has(productId)) {
-    console.log('CACHE HIT SIMILAR IDS', productId);
     return similarIdsCache.get(productId);
   }
 
@@ -24,7 +23,6 @@ async function getSimilarIds(productId) {
 
 async function getProductById(productId) {
   if (productCache.has(productId)) {
-    console.log('CACHE HIT PRODUCT', productId);
     return productCache.get(productId);
   }
 
