@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
-  "_moduleAliases": {
-    "@": "src"
-  },
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "lint": "eslint src",
+    "test": "node --test",
+    "lint": "eslint src test",
     "format": "prettier --write ."
   },
   "keywords": [],

@@ -2,9 +2,9 @@ const fastify = require('fastify');
 const productRoutes = require('./routes/product.routes');
 const errorHandler = require('./handlers/error-handler');
 
-function buildApp() {
+function buildApp(options = {}) {
   const app = fastify({
-    logger: true,
+    logger: options.logger ?? true,
   });
 
   app.setErrorHandler(errorHandler);

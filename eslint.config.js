@@ -7,7 +7,7 @@ module.exports = [
     ignores: ['node_modules/**'],
   },
   {
-    files: ['src/**/*.js'],
+    files: ['src/**/*.js', 'test/**/*.js'],
     ...js.configs.recommended,
     languageOptions: {
       ecmaVersion: 'latest',
